@@ -4,6 +4,7 @@
  */
 package DanhBa;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -40,7 +41,10 @@ public class Menu {
                           String S;
                           System.out.println("nhập tên cần tìm :");
                           S = sc.nextLine();
-                          dt.findPhone(S);
+                           ArrayList<PhoneBook> tempList = dt.findPhone(S);
+                           for(PhoneBook tmep: tempList ){
+                               tmep.displayPhone();
+                           }
                     break;
                       case 6:
                           System.out.println("bye");
